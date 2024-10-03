@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skapa Ny Produkt - Freaky Fashion</title>
+    <link rel="stylesheet" href="/createProduct.css">
+    <script src="https://kit.fontawesome.com/2932dd0c30.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Ny Produkt</h1>
+        </header>
+        <main>
+            <section class="form-section">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="product-name">Namn</label>
+                        <input type="text" id="product-name" name="product-name">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="product-description">Beskrivning</label>
+                        <textarea id="product-description" name="product-description" rows="4"></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="product-image">Bild</label>
+                        <input type="file" id="product-image" name="product-image" accept="image/*">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="product-sku">SKU</label>
+                        <input type="text" id="product-sku" name="product-sku">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="product-price">Pris</label>
+                        <input type="number" id="product-price" name="product-price" step="1">
+                    </div>
+        
+                    <div class="form-group">
+                        <label>Kategori</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="category" value="T-Shirts"> T-Shirts</label>
+                            <label><input type="checkbox" name="category" value="Sommar"> Sommar</label>
+                            <label><input type="checkbox" name="category" value="Byxor"> Byxor</label>
+                            <label><input type="checkbox" name="category" value="Skor"> Skor</label>
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <button type="submit">Lägg till produkt</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    
+
+        <footer>
+            <p>&copy; 2024 Freaky Fashion. Alla rättigheter förbehållna.</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>

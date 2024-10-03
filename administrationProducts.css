@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    flex: 1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.admin-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.btn-create {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #333;
+    color: white;
+}
+
+.product-table td {
+    background-color: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Små skärmar (mobiler, min-width: 576px) */
+@media (min-width: 576px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .btn-create {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Mellanstora skärmar (tablets, min-width: 768px) */
+@media (min-width: 768px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .btn-create {
+        font-size: 18px;
+    }
+
+    .product-table th, .product-table td {
+        padding: 14px;
+    }
+}
+
+/* Större skärmar (desktops, min-width: 992px) */
+@media (min-width: 992px) {
+    .admin-section {
+        padding: 40px;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .btn-create {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+
+    .product-table th, .product-table td {
+        padding: 16px;
+    }
+}
+
+/* Mycket stora skärmar (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .admin-section {
+        padding: 50px;
+    }
+
+    .section-header h2 {
+        font-size: 34px;
+    }
+
+    .btn-create {
+        font-size: 22px;
+    }
+
+    .product-table th, .product-table td {
+        padding: 18px;
+    }
+}

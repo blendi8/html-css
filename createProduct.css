@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e5533b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Små skärmar (mobiler, min-width: 576px) */
+@media (min-width: 576px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    button {
+        font-size: 18px;
+    }
+}
+
+/* Mellanstora skärmar (tablets, min-width: 768px) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    label {
+        font-size: 22px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    button {
+        font-size: 20px;
+    }
+}
+
+/* Större skärmar (desktops, min-width: 992px) */
+@media (min-width: 992px) {
+    .form-section {
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    label {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    button {
+        font-size: 22px;
+    }
+}
+
+/* Mycket stora skärmar (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .form-section {
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    label {
+        font-size: 26px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea,
+    input[type="file"],
+    button {
+        font-size: 24px;
+    }
+}
