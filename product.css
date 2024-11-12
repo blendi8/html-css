@@ -20,14 +20,129 @@ main{
 }
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
+    padding: 10px;
     color: white;
-    padding: 20px;
+    flex-wrap: wrap;
 }
 
-header h1 {
-    margin-bottom: 10px;
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.spottar {
+    display: none;
+    height: 4px;
+    background: #ff6347;
+    width: 100%;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-right input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    /* Gör header vertikal på mindre skärmar */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Flyttar navigationslänkarna under sökfältet */
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Ändrar bredd och justering av header-right på mindre skärmar */
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 576px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.4em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .spottar {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 4em;
+    }
+
+    .hero p {
+        font-size: 1.6em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 nav a {
@@ -111,7 +226,17 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    margin-top: 30px;
+    margin-top: 40px;
+}
+
+.footer-section h4 {
+    cursor: pointer;
+}
+
+.footer-content {
+    display: none;
+    padding: 10px;
+    background-color: #444;
 }
 
 
@@ -180,6 +305,16 @@ footer {
 
     .description {
         font-size: 22px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .spottar {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

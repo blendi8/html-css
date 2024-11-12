@@ -60,8 +60,28 @@
     
 
         <footer>
+            <div class="footer-section">
+                <h4 onclick="toggleAccordion(this)">Om oss</h4>
+                <p class="footer-content">Freaky Fashion är en trendig klädbutik online.</p>
+            </div>
+            <div class="footer-section">
+                <h4 onclick="toggleAccordion(this)">Kontakt</h4>
+                <p class="footer-content">Kontakta oss via e-post: info@freakyfashion.se</p>
+            </div>
+            <div class="footer-section">
+                <h4 onclick="toggleAccordion(this)">Kundtjänst</h4>
+                <p class="footer-content">Vi hjälper dig med alla dina frågor.</p>
+            </div>
             <p>&copy; 2024 Freaky Fashion. Alla rättigheter förbehållna.</p>
         </footer>
+    </div>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
     </div>
 
 
