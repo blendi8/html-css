@@ -78,7 +78,6 @@ header {
 
 
 
-/* Små skärmar (mobiler, min-width: 576px) */
 @media (min-width: 576px) {
     .section-header h2 {
         font-size: 28px;
@@ -90,7 +89,6 @@ header {
     }
 }
 
-/* Mellanstora skärmar (tablets, min-width: 768px) */
 @media (min-width: 768px) {
     .section-header h2 {
         font-size: 30px;
@@ -105,7 +103,6 @@ header {
     }
 }
 
-/* Större skärmar (desktops, min-width: 992px) */
 @media (min-width: 992px) {
     .admin-section {
         padding: 40px;
@@ -135,7 +132,7 @@ header {
     }
 }
 
-/* Mycket stora skärmar (min-width: 1200px) */
+
 @media (min-width: 1200px) {
     .admin-section {
         padding: 50px;
@@ -230,12 +227,12 @@ footer {
     background-color: #f5f5f5;
     color: #f5f5f5;
     border-color: #f5f5f5;
-    width: 100%; /* Ensure accordion spans the full width */
+    width: 100%; 
   }
   
   .accordion-item {
-    width: 100%; /* Each item also spans the full width */
-    border: none; /* Remove borders for a cleaner look */
+    width: 100%; 
+    border: none; 
   }
   ul {
     list-style-type: none;
@@ -244,35 +241,35 @@ footer {
   
   
   .accordion-header {
-    width: 100%; /* Header spans the full width */
-    text-align: left; /* Align header text to the left */
+    width: 100%;
+    text-align: left; 
    
-    padding: 15px; /* Add some padding */
+    padding: 15px;
 
   }
   
   .accordion-button {
     
-    background-color: #f5f5f5; /* Customize button background */
-    color: #333; /* Button text color */
-    width: 100%; /* Ensure button spans full width */
-    text-align: left; /* Align button text to the left */
-    padding: 15px; /* Padding for better usability */
-    border: none; /* Remove default button border */
-    outline: none; /* Remove focus outline */
+    background-color: #f5f5f5; 
+    color: #333; 
+    width: 100%;
+    text-align: left; 
+    padding: 15px;
+    border: none; 
+    outline: none; 
   }
 
   .accordion-button:focus {
-    box-shadow: none; /* Remove Bootstrap's default focus shadow */
-    border: 1px solid #ccc; /* Optional: Add subtle border on focus */
+    box-shadow: none;
+    border: 1px solid #ccc; 
   }
   
   .accordion-collapse {
-    width: 100%; /* Content expands full width */
+    width: 100%; 
   }
   
   .accordion-body {
-    padding: 15px; /* Add padding for content readability */
-    background-color: #f5f5f5; /* Background color for content */
-    border: 1px solid #ddd; /* Border for separation */
+    padding: 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd; 
   }
