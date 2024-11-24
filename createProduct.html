@@ -6,7 +6,8 @@
     <title>Skapa Ny Produkt - Freaky Fashion</title>
     <link rel="stylesheet" href="/createProduct.css">
     <script src="https://kit.fontawesome.com/2932dd0c30.js" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -60,19 +61,91 @@
     
 
         <footer>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Om oss</h4>
-                <p class="footer-content">Freaky Fashion är en trendig klädbutik online.</p>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shopping</h3>
+                    <ul>
+                        <li><a href="#">Vinterjackor</a></li>
+                        <li><a href="#">Pufferjackor</a></li>
+                        <li><a href="#">Kappa</a></li>
+                        <li><a href="#">Trenchcoats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Mina Sidor</h3>
+                    <ul>
+                        <li><a href="#">Mina Ordrar</a></li>
+                        <li><a href="#">Mitt Konto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundtjänst</h3>
+                    <ul>
+                        <li><a href="#">Returnpolicy</a></li>
+                        <li><a href="#">Integritetspolicy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Kontakt</h4>
-                <p class="footer-content">Kontakta oss via e-post: info@freakyfashion.se</p>
+
+            <!-- Accordion for screens <640px -->
+            <div class="accordion d-md-none" id="footerAccordion">
+            <!-- Shopping Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingShopping">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShopping" aria-expanded="true" aria-controls="collapseShopping">
+                            Shopping
+                        </button>
+                    </h2>
+                    <div id="collapseShopping" class="accordion-collapse collapse show" aria-labelledby="headingShopping" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="#">Vinterjackor</a></li>
+                                <li><a href="#">Pufferjackor</a></li>
+                                <li><a href="#">Kappa</a></li>
+                                <li><a href="#">Trenchcoats</a></li>
+                            </ul>
+                        </div>
+                    </div>
             </div>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Kundtjänst</h4>
-                <p class="footer-content">Vi hjälper dig med alla dina frågor.</p>
+
+        <!-- Mina Sidor Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMinaSidor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinaSidor" aria-expanded="false" aria-controls="collapseMinaSidor">
+                        Mina Sidor
+                    </button>
+                </h2>
+                <div id="collapseMinaSidor" class="accordion-collapse collapse" aria-labelledby="headingMinaSidor" data-bs-parent="#footerAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Mina Ordrar</a></li>
+                            <li><a href="#">Mitt Konto</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 Freaky Fashion. Alla rättigheter förbehållna.</p>
+
+        <!-- Kundtjänst Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingKundtjänst">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKundtjänst" aria-expanded="false" aria-controls="collapseKundtjänst">
+                        Kundtjänst
+                    </button>
+                </h2>
+                <div id="collapseKundtjänst" class="accordion-collapse collapse" aria-labelledby="headingKundtjänst" data-bs-parent="#footerAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Returnpolicy</a></li>
+                            <li><a href="#">Integritetspolicy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Freaky Fashion</p>
+            </div>
         </footer>
     </div>
 

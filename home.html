@@ -6,25 +6,34 @@
     <title>Freaky Fashion</title>
     <link rel="stylesheet" href="/home.css">
     <script src="https://kit.fontawesome.com/2932dd0c30.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="header">
             <div class="logo">
-                <img src="/image/freakyfashionlogo.jpg" alt="Freaky Fashion Logo" width="150">
+                
+                <div class="logo-placeholder"><img src="/image/freakyfashionlogo.jpg"></div>
             </div>
-            <nav>
-                <a href="#">Nyheter</a>
-                <a href="#">Topplista</a>
-                <a href="#">Rea</a>
-                <a href="#">Kampanjer</a>
-                <div class="spottar" id="spottar"></div>
-            </nav>
-            <div class="header-right">
-                <input type="text" placeholder="Sök...">
-                <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
-                <a href="#" class="icon"><i class="fa-solid fa-basket-shopping"></i></a>
+            <div class="search-and-icons">
+                <input type="text" class="search-bar" placeholder="Sök produkt">
+                <div class="icons">
+                    <a href="#" class="icon"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#" class="icon"><i class="fa-solid fa-basket-shopping"></i></a>
+                </div>
             </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Nyheter</a></li>
+                    <li><a href="#">Topplistan</a></li>
+                    <li><a href="#">Rea</a></li>
+                    <li><a href="#">Kampanjer</a></li>
+                </ul>
+            </div>
+           
         </header>
 
         <main>
@@ -33,21 +42,37 @@
                 <p>Upptäck det senaste inom mode och design</p>
                 <a href="#" class="btn">Handla Nu</a>
             </section>
-
+            <div class="spottar-container">
+                <div class="spottar">Spott 1</div>
+                <div class="spottar">Spott 2</div>
+                <div class="spottar">Spott 3</div>
+            </div>
+            
             <section class="products">
                 <h2>Våra Produkter</h2>
                 <div class="product-grid">
-                    <a href="/product.html">
                         <div class="product">
                             <div class="product-image">
-                                <img src="/image/black-tshirt.jpg" alt="Produkt 1">
+                                <img src="/image/realbrown.jpg" alt="Produkt 4">
                                 <div class="favorite-heart"><a href="#">❤️</a></div>
                             </div>
-                            <h3>Svart T-Shirt</h3>
+                            <h3>Brun T-Shirt</h3>
                             <p>Enkel och bekväm</p>
-                            <p class="price">599 kr</p>
+                            <p class="price">1,199 kr</p>
                         </div>
-                    </a>
+                   
+                        <div class="product">
+                            <a href="/product.html">
+                                <div class="product-image">
+                                    <img src="/image/black-tshirt.jpg" alt="Produkt 1">
+                                    <div class="favorite-heart"><a href="#">❤️</a></div>
+                                </div>
+                                <h3>Svart T-Shirt</h3>
+                                <p>Enkel och bekväm</p>
+                                <p class="price">599 kr</p>
+                            </a>
+                        </div>
+                    
                     <div class="product">
                         <div class="product-image">
                             <img src="/image/darkpurpletshirt.jpg" alt="Produkt 2">
@@ -67,33 +92,97 @@
                         <p class="price">899 kr</p>
                     </div>
                     
-                    <div class="product">
-                        <div class="product-image">
-                            <img src="/image/realbrown.jpg" alt="Produkt 4">
-                            <div class="favorite-heart"><a href="#">❤️</a></div>
-                        </div>
-                        <h3>Brun T-Shirt</h3>
-                        <p>Enkel och bekväm</p>
-                        <p class="price">1,199 kr</p>
-                    </div>
+                    
                 </div>
             </section>
         </main>
         
         <footer>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Om oss</h4>
-                <p class="footer-content">Freaky Fashion är en trendig klädbutik online.</p>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shopping</h3>
+                    <ul>
+                        <li><a href="#">Vinterjackor</a></li>
+                        <li><a href="#">Pufferjackor</a></li>
+                        <li><a href="#">Kappa</a></li>
+                        <li><a href="#">Trenchcoats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Mina Sidor</h3>
+                    <ul>
+                        <li><a href="#">Mina Ordrar</a></li>
+                        <li><a href="#">Mitt Konto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kundtjänst</h3>
+                    <ul>
+                        <li><a href="#">Returnpolicy</a></li>
+                        <li><a href="#">Integritetspolicy</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Kontakt</h4>
-                <p class="footer-content">Kontakta oss via e-post: info@freakyfashion.se</p>
+
+            <!-- Accordion for screens <640px -->
+            <div class="accordion d-md-none" id="footerAccordion">
+            <!-- Shopping Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingShopping">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShopping" aria-expanded="true" aria-controls="collapseShopping">
+                            Shopping
+                        </button>
+                    </h2>
+                    <div id="collapseShopping" class="accordion-collapse collapse show" aria-labelledby="headingShopping" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><a href="#">Vinterjackor</a></li>
+                                <li><a href="#">Pufferjackor</a></li>
+                                <li><a href="#">Kappa</a></li>
+                                <li><a href="#">Trenchcoats</a></li>
+                            </ul>
+                        </div>
+                    </div>
             </div>
-            <div class="footer-section">
-                <h4 onclick="toggleAccordion(this)">Kundtjänst</h4>
-                <p class="footer-content">Vi hjälper dig med alla dina frågor.</p>
+
+        <!-- Mina Sidor Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMinaSidor">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinaSidor" aria-expanded="false" aria-controls="collapseMinaSidor">
+                        Mina Sidor
+                    </button>
+                </h2>
+                <div id="collapseMinaSidor" class="accordion-collapse collapse" aria-labelledby="headingMinaSidor" data-bs-parent="#footerAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Mina Ordrar</a></li>
+                            <li><a href="#">Mitt Konto</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 Freaky Fashion. Alla rättigheter förbehållna.</p>
+
+        <!-- Kundtjänst Section -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingKundtjänst">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKundtjänst" aria-expanded="false" aria-controls="collapseKundtjänst">
+                        Kundtjänst
+                    </button>
+                </h2>
+                <div id="collapseKundtjänst" class="accordion-collapse collapse" aria-labelledby="headingKundtjänst" data-bs-parent="#footerAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="#">Returnpolicy</a></li>
+                            <li><a href="#">Integritetspolicy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; Freaky Fashion</p>
+            </div>
         </footer>
     </div>
 
